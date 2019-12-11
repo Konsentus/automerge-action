@@ -80,9 +80,9 @@ async function main() {
     );
 
     if (exeuteResult) {
-      logger.info("::set-output merged=true");
+      logger.info("::set-output name=merged::true");
     } else {
-      logger.info("::set-output merged=false");
+      logger.info("::set-output name=merged::false");
     }
   }
 }
