@@ -6,3 +6,6 @@ runs:
 branding:
   icon: "git-pull-request"
   color: "blue"
+outputs:
+  merged:
+    description: Set to true if a merge was performed, false if not.

@@ -73,7 +73,17 @@ async function main() {
     const eventDataStr = await fse.readFile(eventPath, "utf8");
     const eventData = JSON.parse(eventDataStr);
 
-    await executeGitHubAction(context, eventName, eventData);
+    const exeuteResult = await executeGitHubAction(
+      context,
+      eventName,
+      eventData
+    );
+
+    if (exeuteResult) {
+      logger.info("::set-output merged=true");
+    } else {
+      logger.info("::set-output merged=false");
+    }
   }
 }
 
