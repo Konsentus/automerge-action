@@ -81,11 +81,11 @@ async function main() {
 
     if (exeuteResult) {
       console.log("Returning true");
-      console.log("  ::set-output name=merged::true");
+      console.log("::set-outputs name=merged::true");
       console.log("::set-output name=merged::true");
     } else {
       console.log("Returning false");
-      console.log("  ::set-output name=merged::false");
+      console.log("::set-outputs name=merged::false");
       console.log("::set-output name=merged::false");
     }
   }
